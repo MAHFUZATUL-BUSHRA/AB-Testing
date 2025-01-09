@@ -101,6 +101,7 @@ The project performs several statistical tests to validate hypotheses:
 - Include automated outlier detection and handling.
 - Add support for larger datasets with performance optimizations.
 - Enhance visualizations with interactive dashboards (e.g., using Plotly).
+- Can Apply Same method for other datasets also!
 
 ## Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for any proposed changes.
