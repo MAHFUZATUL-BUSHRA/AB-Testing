@@ -233,24 +233,6 @@ This ensures each performance change is backed by statistical validation.
 
 ![p](https://github.com/MAHFUZATUL-BUSHRA/AB-Testing/blob/main/graphs/click.png)
 
-#### CTR distribution plots
-
-
-#### CVR comparison plots
-
-
-#### Scatter: Impressions vs Clicks, Spend vs ConversionValue
-
-
-#### CPC distribution
-
-#### Correlation heatmap
-
-#### Boxplots for all major KPIs
-
-#### Side-by-side visual comparisons for A and B
-
-#### These visuals help reveal insights beyond statistical results.
 
 ---
 
