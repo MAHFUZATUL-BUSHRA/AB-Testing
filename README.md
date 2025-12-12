@@ -107,132 +107,117 @@ The project performs several statistical tests to validate hypotheses:
 Contributions are welcome! Please fork this repository and submit a pull request for any proposed changes.
 
 # 🔍 Additional A/B Testing Analysis – Search Optimization Dataset
+🧪 A/B Test #2 – User Engagement & CTR Experiment (Ads Experience Test)
 
-This is another complete A/B testing analysis performed on a different dataset related to search campaign optimization. This second experiment follows the same structured methodology—data preparation, visualization, and statistical hypothesis testing—to compare the performance of Group A and Group B across multiple marketing KPIs.
+This A/B test analyzes the impact of a new ads experience on user engagement and CTR.
+It uses four datasets covering pre-test metrics, assignments, and full activity logs.
 
-## Project Overview
+## 📘 1. Objective
 
-This A/B test focuses on user engagement and conversion performance using search marketing metrics such as impressions, clicks, CTR, conversions, conversion value, CPC, and spend.
-The analysis:
+#### Evaluate whether introducing a new ads experience:
 
-Loads Version A and Version B data from an Excel file
+- Increases user activity (primary metric: activity_level)
+- Maintains or improves guardrail metrics (DAU & CTR)
+- Avoids any pre-test bias
+- Achieves statistical significance
 
-Performs preprocessing and renaming for clean workflow
+## 📁 2. Datasets Used
 
-Visualizes patterns, distributions, and correlations
+1.Activity_pretest.csv – Pre-test user activity (used for DAU baseline)
+2.Ctr_pretest.csv – Pre-test click-through rates
+3.Assignments.csv – Test/control group assignments
+4.Activity_all.csv – Full activity logs before and during the experiment
 
-Applies rigorous statistical tests to identify meaningful differences
+## 📊 3. Pre-Test Analysis
+#### Daily Active Users (DAU)
+- 31 days of data
+- Mean DAU: ~30,673
+- Std Dev: 91
+- DAU trends are stable → good baseline for experimentation
+#### CTR
+- Mean CTR: 33%
+- Std Dev: 1.73
+- Minimum detectable effect (MDE): ~2%
+Pre-test results show stable and consistent behavior, enabling reliable test setup.
 
-## Key Features
-#### 1. Data Preparation
+## 📐 4. Sample Size & Power Calculations
+CTR (Binomial Test)
+- Baseline CTR = 0.33
+- MDE = 0.02
+- α = 0.05, β = 0.2
+➡️ Required sample size: ≈ 8,807 users per group
 
-- Loads and inspects the dataset
+DAU (Continuous Metric)
+- SD = 91
+- MDE = 300 (≈1% increase)
+ ➡️ Required duration: ≈ 2 days
 
-- Ensures correct datatypes and numeric formatting
+## 🔁 5. Group Assignment Validation
 
-- Cleans missing or inconsistent values
+Assignments.csv contains 60,000 users:
+- Control users	29,951
+- Treatment	users 30,049
+- Distribution is balanced (mean groupid ≈ 0.50)
+- No assignment irregularities across dates
+✔ No allocation bias
 
-- Renames columns (CTR, CVR, CPC, ConversionValue, etc.) for readability
+## 📈 6. Engagement & Guardrail Metrics
+### Activity Level (Per-User Engagement)
 
-#### 2. Exploratory Data Analysis
+#### Before Test (Oct):
 
-Includes:
+- Both groups ≈ 5.25 mean activity → identical
 
-- Summary statistics for both groups
+#### After Test (Nov):
 
-- Distribution plots (histograms, KDE)
+- Control: ~5.4
+- Treatment: ~10.0
+✔ Strong performance lift in treatment group
 
-- Boxplots to compare central tendency
+### Daily Active Users (DAU)
 
-- Scatter plots for relationships (e.g., Spend vs ConversionValue)
+#### Before Test:
 
-- Correlation matrix for key performance metrics
+- Control mean ≈ 15,320
+- Treatment mean ≈ 15,352
+- t-test p = 0.16 → No pre-test difference
 
-#### 3. Statistical Hypothesis Testing
+#### After Test:
 
-- A structured testing pipeline is used:
+- Control DAU ≈ 15,782
+- Treatment DAU ≈ 29,302
+ ✔ Large gain without harming guardrails
 
-- Normality Check
+### 🧪 7. Statistical Testing
+#### Activity Level (Per-User)
 
-- Shapiro-Wilk test for A and B groups
+#### Two-sample t-test:
+- p-value = 0.0
 
-- Determines if data is parametric or non-parametric
+➡️ Reject H₀ → Significant improvement in engagement
 
-- Variance Homogeneity
+#### Active User Count
 
-- Levene’s test to verify equality of variances
+- Pre-test: No significant difference
+- Post-test: Strong and significant difference
 
-- Significance Testing
-
-#### Based on assumptions:
-
-- Independent T-test → normal + equal variance
-
-- Mann–Whitney U test → non-normal or unequal variance
-
-- Each metric is tested independently, ensuring proper statistical rigor.
-
-## 📊 Metrics Analyzed
-
-- The following performance indicators were analyzed across A and B:
-
-- Impressions
-
-- Clicks
-
-- CTR (Click-Through Rate)
-
-- Conversions
-
-- Conversion Rate (CVR)
-
-- Conversion Value
-
-- CPC (Cost Per Click)
-
-- Spend
-
-- Visual and statistical comparisons are provided for each.
-
-##🧪 Results Summary
-### 📈 Conversion Rate (CVR)
-
-Mann–Whitney U test shows a statistically significant difference.
-
-Group B has a higher median CVR, indicating stronger performance.
-
-### 📉 CTR (Click-Through Rate)
-
-Histogram and density plots show noticeable differences.
-
-Statistical test results indicate whether these differences are meaningful.
-
-### 💰 Conversion Value
-
-Group B shows an improved distribution in many visual comparisons.
-
-Statistical tests reveal whether increases are significant.
-
-## Other Metrics
-
-Each metric includes:
-
-Distribution comparison
-
-Boxplot comparison
-
-Appropriate hypothesis test
-
-Interpretation of the p-value
-
-This ensures each performance change is backed by statistical validation.
+✔ Results are statistically valid
+✔ No pre-test bias detected
 
 ### 📈 Visualizations Included
 
-#### The notebook produces:
+![p](https://github.com/MAHFUZATUL-BUSHRA/AB-Testing/blob/main/result.png)
 
-![p](https://github.com/MAHFUZATUL-BUSHRA/AB-Testing/blob/main/graphs/click.png)
+### ✅ 8. Conclusion
 
+The new ads experience significantly increases user engagement:
+
+✔ Higher per-user activity
+✔ Substantially more daily active users
+✔ No negative impact on key guardrail metrics
+✔ Statistically significant (p < 0.05)
+
+➡️ Recommendation: Roll out the new ads experience.
 
 ---
 
