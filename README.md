@@ -1,4 +1,4 @@
-# A/B Testing Analysis
+# A/B Testing Analysis - TWO SEO (Search Engine Optimization)/Digital Marketing Campaign.
 
 This project implements an A/B testing analysis pipeline using Python, aiming to compare the performance of two groups—Control (Group A) and Test (Group B)—across various metrics. The dataset is processed and analyzed to extract actionable insights about user behavior and group performance differences.
 
@@ -106,7 +106,7 @@ The project performs several statistical tests to validate hypotheses:
 ## Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for any proposed changes.
 
-🔍 Additional A/B Testing Analysis – Search Optimization Dataset
+# 🔍 Additional A/B Testing Analysis – Search Optimization Dataset
 
 This is another complete A/B testing analysis performed on a different dataset related to search campaign optimization. This second experiment follows the same structured methodology—data preparation, visualization, and statistical hypothesis testing—to compare the performance of Group A and Group B across multiple marketing KPIs.
 
