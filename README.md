@@ -106,7 +106,151 @@ The project performs several statistical tests to validate hypotheses:
 ## Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for any proposed changes.
 
+🔍 Additional A/B Testing Analysis – Search Optimization Dataset
 
+This is another complete A/B testing analysis performed on a different dataset related to search campaign optimization. This second experiment follows the same structured methodology—data preparation, visualization, and statistical hypothesis testing—to compare the performance of Group A and Group B across multiple marketing KPIs.
+
+## Project Overview
+
+This A/B test focuses on user engagement and conversion performance using search marketing metrics such as impressions, clicks, CTR, conversions, conversion value, CPC, and spend.
+The analysis:
+
+Loads Version A and Version B data from an Excel file
+
+Performs preprocessing and renaming for clean workflow
+
+Visualizes patterns, distributions, and correlations
+
+Applies rigorous statistical tests to identify meaningful differences
+
+## Key Features
+#### 1. Data Preparation
+
+- Loads and inspects the dataset
+
+- Ensures correct datatypes and numeric formatting
+
+- Cleans missing or inconsistent values
+
+- Renames columns (CTR, CVR, CPC, ConversionValue, etc.) for readability
+
+#### 2. Exploratory Data Analysis
+
+Includes:
+
+- Summary statistics for both groups
+
+- Distribution plots (histograms, KDE)
+
+- Boxplots to compare central tendency
+
+- Scatter plots for relationships (e.g., Spend vs ConversionValue)
+
+- Correlation matrix for key performance metrics
+
+#### 3. Statistical Hypothesis Testing
+
+- A structured testing pipeline is used:
+
+- Normality Check
+
+- Shapiro-Wilk test for A and B groups
+
+- Determines if data is parametric or non-parametric
+
+- Variance Homogeneity
+
+- Levene’s test to verify equality of variances
+
+- Significance Testing
+
+#### Based on assumptions:
+
+- Independent T-test → normal + equal variance
+
+- Mann–Whitney U test → non-normal or unequal variance
+
+- Each metric is tested independently, ensuring proper statistical rigor.
+
+## 📊 Metrics Analyzed
+
+- The following performance indicators were analyzed across A and B:
+
+- Impressions
+
+- Clicks
+
+- CTR (Click-Through Rate)
+
+- Conversions
+
+- Conversion Rate (CVR)
+
+- Conversion Value
+
+- CPC (Cost Per Click)
+
+- Spend
+
+- Visual and statistical comparisons are provided for each.
+
+##🧪 Results Summary
+### 📈 Conversion Rate (CVR)
+
+Mann–Whitney U test shows a statistically significant difference.
+
+Group B has a higher median CVR, indicating stronger performance.
+
+### 📉 CTR (Click-Through Rate)
+
+Histogram and density plots show noticeable differences.
+
+Statistical test results indicate whether these differences are meaningful.
+
+### 💰 Conversion Value
+
+Group B shows an improved distribution in many visual comparisons.
+
+Statistical tests reveal whether increases are significant.
+
+## Other Metrics
+
+Each metric includes:
+
+Distribution comparison
+
+Boxplot comparison
+
+Appropriate hypothesis test
+
+Interpretation of the p-value
+
+This ensures each performance change is backed by statistical validation.
+
+### 📈 Visualizations Included
+
+#### The notebook produces:
+
+![p](https://github.com/MAHFUZATUL-BUSHRA/AB-Testing/blob/main/graphs/click.png)
+
+#### CTR distribution plots
+
+
+#### CVR comparison plots
+
+
+#### Scatter: Impressions vs Clicks, Spend vs ConversionValue
+
+
+#### CPC distribution
+
+#### Correlation heatmap
+
+#### Boxplots for all major KPIs
+
+#### Side-by-side visual comparisons for A and B
+
+#### These visuals help reveal insights beyond statistical results.
 
 ---
 
