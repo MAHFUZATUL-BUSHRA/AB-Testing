@@ -265,7 +265,12 @@ A simulated **Converted** column is added to demonstrate conversion rate analysi
 
 ### Step 2: Visualization
 - Boxplots used to compare Monthly Spend distributions
+
+![p](https://github.com/MAHFUZATUL-BUSHRA/AB-Testing/blob/main/AB%20Testing%20on%20Supershop_data/Screenshot%202025-12-13%20155616.png)
+
 - Bar plots used to visualize conversion rate differences
+
+![p](https://github.com/MAHFUZATUL-BUSHRA/AB-Testing/blob/main/AB%20Testing%20on%20Supershop_data/Screenshot%202025-12-13%20155659.png)
 
 ---
 
