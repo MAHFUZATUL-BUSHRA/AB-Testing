@@ -220,6 +220,140 @@ The new ads experience significantly increases user engagement:
 ➡️ Recommendation: Roll out the new ads experience.
 
 ---
+# 📊 A/B Testing & Hypothesis Testing Workshop  - Supershop Data 
+
+## 📌 Project Overview
+This project demonstrates a complete **A/B Testing and Hypothesis Testing pipeline** using Python on a Supershop retail dataset.  
+The objective is to compare **Control (A)** and **Variant (B)** groups, validate statistical assumptions, and apply appropriate tests to draw meaningful, data-driven conclusions.
+
+This project is suitable for:
+- Data Analyst / Data Scientist portfolios  
+- Interview and assessment preparation  
+- Learning practical statistics with real-world data  
+
+---
+
+## 🧰 Tools & Libraries
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- SciPy  
+- Statsmodels  
+- Google Colab  
+
+---
+
+## 📂 Dataset Description
+The Supershop dataset contains customer-level information including:
+- Monthly spending behavior  
+- Customer demographics (Age, Gender)  
+- Product categories  
+- Promotion usage  
+- Experiment group assignment (Control vs Variant)  
+
+A simulated **Converted** column is added to demonstrate conversion rate analysis.
+
+---
+
+## 🔬 A/B Testing Workflow
+
+### Step 1: Summary Statistics
+- Calculated count, mean, standard deviation, and percentiles of **MonthlySpend**
+- Initial analysis shows similar average spend for Control and Variant groups
+
+### Step 2: Visualization
+- Boxplots used to compare Monthly Spend distributions
+- Bar plots used to visualize conversion rate differences
+
+---
+
+## 📐 Hypothesis Testing
+
+### Independent Two-Sample T-Test
+**Goal:** Compare mean Monthly Spend between Control and Variant  
+
+- **Null Hypothesis (H₀):** Mean spend is equal for both groups  
+- **Alternative Hypothesis (H₁):** Mean spend is different  
+
+**Result:**  
+- p-value = 0.908  
+- Fail to reject the null hypothesis  
+
+**Conclusion:**  
+There is no statistically significant difference in Monthly Spend between Control and Variant groups.
+
+---
+
+## 📏 Sample Size & Power Analysis
+- Power analysis performed using `TTestIndPower`
+- Assumptions:
+  - Small expected effect size
+  - 80% statistical power
+  - 5% significance level
+
+**Result:**  
+Approximately **394 users per group** are required to detect the expected effect.
+
+---
+
+## 🔁 Conversion Rate Analysis
+
+### Proportion Z-Test
+A simulated conversion metric was used to compare performance.
+
+- **Null Hypothesis (H₀):** No difference in conversion rates  
+- **Result:** p-value < 0.001  
+- **Conclusion:** Variant group shows a statistically significant improvement in conversion rate.
+
+---
+
+## 🧪 Assumption Checks
+
+### Normality Test (Shapiro-Wilk)
+- Applied to Control and Variant groups
+- p > 0.05 → Data is approximately normally distributed
+
+### Homogeneity of Variance (Levene’s Test)
+- p > 0.05 → Equal variance assumption holds
+
+---
+
+## 📊 Additional Statistical Tests
+
+- **One-Sample t-test:** Mean Monthly Spend vs $190  
+- **ANOVA:** Monthly Spend across Product Categories  
+- **Chi-Square Test:** Gender vs Promotion Usage  
+- **Mann-Whitney U Test:** Non-parametric alternative to t-test  
+- **Kruskal-Wallis Test:** Non-parametric ANOVA  
+- **Wilcoxon Signed-Rank Test:** Before vs After comparison  
+- **Pearson Correlation:** Age vs Monthly Spend  
+
+---
+
+## 📚 Key Concepts Covered
+- A/B Testing fundamentals  
+- Hypothesis formulation  
+- p-values and statistical significance  
+- Sample size and power analysis  
+- Minimum Detectable Effect (MDE)  
+- Parametric vs Non-parametric tests  
+- Guardrail metrics and success metrics  
+- Avoiding p-hacking  
+
+---
+
+## ✅ Key Takeaways
+- Always validate assumptions before choosing statistical tests  
+- Statistical significance must be interpreted in business context  
+- Combining visualization and hypothesis testing improves decision-making  
+- Proper experiment design is critical for reliable insights  
+
+---
+
+
+If you find this project useful, feel free to ⭐ the repository.
 
 Feel free to update this README to better fit the specific goals and outcomes of your project.
 
